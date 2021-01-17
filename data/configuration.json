@@ -1,0 +1,17 @@
+{
+  "projection": {
+    "fieldOfView": 0.78539816339,
+    "near": 0.1,
+    "far": 100
+  },
+  "light": {
+    "ambient": {
+      "color": [0.3, 0.3, 0.3]
+    },
+    "directional": {
+      "color": [1, 1, 1],
+      "direction": [0.85, 0.8, 0.75]
+    }
+  },
+  "rotationSpeed": 3.14159265359
+}
