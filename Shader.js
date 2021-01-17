@@ -6,9 +6,10 @@ class Shader {
     gl.shaderSource(this.shader, source);
     gl.compileShader(this.shader);
     if (!gl.getShaderParameter(this.shader, gl.COMPILE_STATUS)) {
-      alert('Error compiling shader: ' + gl.getShaderInfoLog(this.shader));
+      const error = gl.getShaderInfoLog(this.shader);
       gl.deleteShader(this.shader);
-      shader = null;
+      this.shader = null;
+      throw new CompilationError(error);
     }
   }
 }

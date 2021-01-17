@@ -11,10 +11,10 @@ class Program {
     gl.attachShader(this.#program, fragmentShader.shader);
     gl.linkProgram(this.#program);
     if (!gl.getProgramParameter(this.#program, gl.LINK_STATUS)) {
-      alert('Error linking program: ' + gl.getProgramInfoLog(this.#program));
+      const error = gl.getProgramInfoLog(this.#program);
       gl.deleteProgram(this.#program);
       this.#program = null;
-      return;
+      throw new LinkingError(error);
     }
     this.#uniforms = new Map();
     uniforms.forEach(uniform =>
