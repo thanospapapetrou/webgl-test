@@ -7,11 +7,6 @@ class WebGLTest {
   static NEAR = 0.1;
   static ROTATION_SPEED = Math.PI; // rad/s
 
-  static #ATTRIBUTE_COLOR = 'color';
-  static #ATTRIBUTE_NORMAL = 'normal';
-  static #ATTRIBUTE_POSITION = 'position';
-  static #CANVAS_SELECTOR = '#gl';
-
   static #COLORS = [
     // Front face: white
     1.0,  1.0,  1.0,  1.0,
@@ -124,6 +119,10 @@ class WebGLTest {
     -1.0,  1.0,  1.0,
     -1.0,  1.0, -1.0,
   ];
+  static #ATTRIBUTE_COLOR = 'color';
+  static #ATTRIBUTE_NORMAL = 'normal';
+  static #ATTRIBUTE_POSITION = 'position';
+  static #CANVAS_SELECTOR = '#gl';
   static #UNIFORM_AMBIENT_LIGHT_COLOR = 'ambientLightColor';
   static #UNIFORM_DIRECTIONAL_LIGHT_COLOR = 'directionalLightColor';
   static #UNIFORM_DIRECTIONAL_LIGHT_DIRECTION = 'directionalLightDirection';
