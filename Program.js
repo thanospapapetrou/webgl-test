@@ -28,6 +28,12 @@ class Program {
 
   render(uniforms) {
     this.#gl.useProgram(this.#program);
-    uniforms.forEach((value, key) => this.#gl.uniformMatrix4fv(this.#uniforms.get(key), false, value));
+    uniforms.forEach((value, key) => {
+      if (value.length == 3) {
+        this.#gl.uniform3fv(this.#uniforms.get(key), value);
+      } else {
+        this.#gl.uniformMatrix4fv(this.#uniforms.get(key), false, value);
+      }
+    });
   }
 }
