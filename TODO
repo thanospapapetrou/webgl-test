@@ -1,0 +1,5 @@
+textures
+Program.js -> magic constant 3
+LoadingError.js
+WebGLTest.js -> magic constants clear color, clear depth, model view matrix
+FPS
