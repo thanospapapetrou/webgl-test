@@ -39,7 +39,6 @@ class WebGLTest {
   #configuration;
   #fps;
   #projectionMatrix;
-  #fps;
   #time;
   #rotation;
 
@@ -126,10 +125,8 @@ class WebGLTest {
     this.#textureCoordinates = new ArrayBuffer(gl, textureCoordinates.size, textureCoordinates.data);
     this.#colors = new ArrayBuffer(gl, colors.size, colors.data);
     this.#indices = new ElementArrayBuffer(gl, indices.data);
-    this.#configuration = configuration;
-    this.#fps = fps;
+    this.#configuration = configuration;    this.#fps = fps;
     this.#projectionMatrix = this.#calculateProjectionMatrix();
-    this.#fps = fps;
     this.#time = 0;
     this.#rotation = 0;
     gl.clearColor(0.0, 0.0, 0.0, 1.0);

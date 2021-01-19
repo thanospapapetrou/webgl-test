@@ -31,8 +31,10 @@ class Program {
     uniforms.forEach((value, key) => {
       if (value.length == 3) {
         this.#gl.uniform3fv(this.#uniforms.get(key), value);
-      } else {
+      } else if (value.length == 16) {
         this.#gl.uniformMatrix4fv(this.#uniforms.get(key), false, value);
+      } else {
+        this.#gl.uniform1i(this.#uniforms.get(key), value);
       }
     });
   }

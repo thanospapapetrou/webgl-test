@@ -1,6 +1,10 @@
+uniform sampler2D texture;
+
 varying highp vec3 fragmentLight;
-varying lowp vec4 fragmentColor;
+varying highp vec2 fragmentTextureCoordinates;
+varying highp vec4 fragmentColor;
 
 void main(void) {
-  gl_FragColor = vec4(fragmentColor.rgb * fragmentLight, fragmentColor.a);
+  highp vec4 texel = texture2D(texture, fragmentTextureCoordinates);
+  gl_FragColor = vec4(mix(fragmentColor.rgb, texel.rgb, texel.a) * fragmentLight, fragmentColor.a);
 }

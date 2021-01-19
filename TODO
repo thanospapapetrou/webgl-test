@@ -1,4 +1,2 @@
-textures
 Program.js -> magic constant 3
 WebGLTest.js -> magic constants clear color, clear depth, model view matrix
-FPS
