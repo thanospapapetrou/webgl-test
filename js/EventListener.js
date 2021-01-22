@@ -36,7 +36,8 @@ class EventListener {
       console.log('Up');
     } else if (this.#down && (!this.#up)) {
       console.log('Down');
-    } else if (this.#left && (!this.#right)) {
+    }
+    if (this.#left && (!this.#right)) {
       console.log('Left');
     } else if (this.#right && (!this.#left)) {
       console.log('Right');
@@ -61,7 +62,8 @@ class EventListener {
       console.log('Up');
     } else if (this.#down && (!this.#up)) {
       console.log('Down');
-    } else if (this.#left && (!this.#right)) {
+    }
+    if (this.#left && (!this.#right)) {
       console.log('Left');
     } else if (this.#right && (!this.#left)) {
       console.log('Right');
