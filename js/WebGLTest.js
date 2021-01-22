@@ -129,6 +129,7 @@ class WebGLTest {
     this.#projectionMatrix = this.#calculateProjectionMatrix();
     this.#time = 0;
     this.#rotation = 0;
+    new EventListener();
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clearDepth(1.0);
     gl.enable(gl.DEPTH_TEST);
