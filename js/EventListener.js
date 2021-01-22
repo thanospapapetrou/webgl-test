@@ -5,10 +5,10 @@ class EventListener {
   }
 
   #onkeydown(event) {
-    console.log(`Key Down: ${event}`);
+    console.log(`Key Down: ${event.code} ${event.key}`);
   }
 
   #onkeyup(event) {
-    console.log(`Key Up: ${event}`);
+    console.log(`Key Up: ${event.code} ${event.key}`);
   }
 }
