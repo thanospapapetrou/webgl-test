@@ -14,8 +14,8 @@ class EventListener {
     this.#down = false;
     this.#left = false;
     this.#right = false;
-    window.onkeydown = this.#onkeydown;
-    window.onkeyup = this.#onkeyup;
+    window.onkeydown = (event => this.#onkeydown(event));
+    window.onkeyup = (event => this.#onkeyup(event));
   }
 
   #onkeydown(event) {
